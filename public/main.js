@@ -7,7 +7,7 @@ form.addEventListener('submit', (e) => {
   const choice = document.querySelector('input[name=os]:checked').value;
   const data = { os: choice };
 
-  fetch('http://localhost:5500/poll', {
+  fetch('https://safe-sands-25216.herokuapp.com/', {
     method: 'post',
     body: JSON.stringify(data),
     headers: new Headers({
@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {
 });
 
 
-fetch('http://localhost:5500/poll', {
+fetch('https://safe-sands-25216.herokuapp.com/', {
   method: 'GET'
 })
   .then(resp => resp.json())
